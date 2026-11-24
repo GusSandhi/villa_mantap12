@@ -1,0 +1,488 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #f7f7f5;
+  color: #20201e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  padding: 110px 9%;
+}
+
+.subtitle {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #858879;
+  margin-bottom: 22px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 85px;
+  padding: 0 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f5;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #858879;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 35px;
+}
+
+.navbar nav a {
+  font-size: 12px;
+  color: #555;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #858879;
+}
+
+.nav-button {
+  border: 1px solid #242420;
+  padding: 13px 24px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  background: #242420;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  min-height: 680px;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 9%;
+  color: white;
+
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.05)),
+    url("https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=2000");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero .subtitle {
+  color: #deded2;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.hero h1 span,
+.about h2 span,
+.section-heading h2 span,
+.facilities h2 span,
+.gallery h2 span,
+.contact h2 span {
+  color: #a8ad91;
+}
+
+.hero-description {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #e0e0e0;
+  max-width: 450px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #a0a58b;
+  color: white;
+  padding: 17px 27px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.primary-button:hover {
+  background: #777e64;
+}
+
+.text-button {
+  font-size: 12px;
+  border-bottom: 1px solid white;
+  padding-bottom: 7px;
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 9%;
+  right: 9%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #ddd;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.about-content h2,
+.section-heading h2,
+.facilities h2,
+.gallery h2 {
+  font-size: 46px;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.about-content > p:not(.subtitle) {
+  color: #777;
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.text-button.dark {
+  color: #222;
+  border-color: #222;
+}
+
+/* VILLAS */
+.villas {
+  background: #eeeee9;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 45px;
+  gap: 40px;
+}
+
+.section-heading > p {
+  max-width: 330px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.villa-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.villa-image {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.villa-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.villa-card:hover img {
+  transform: scale(1.05);
+}
+
+.villa-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 13px;
+}
+
+.villa-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.villa-info h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.villa-info p {
+  font-size: 11px;
+  color: #858585;
+}
+
+.villa-info a {
+  font-size: 12px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+/* FACILITIES */
+.facilities-heading {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.facilities h2 {
+  margin-bottom: 0;
+}
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.facility-item {
+  border-top: 1px solid #d5d5cd;
+  padding-top: 25px;
+}
+
+.facility-item span {
+  font-size: 11px;
+  color: #a0a58b;
+}
+
+.facility-item h3 {
+  font-size: 20px;
+  margin: 25px 0 15px;
+}
+
+.facility-item p {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.8;
+}
+
+/* GALLERY */
+.gallery {
+  background: #eeeee9;
+}
+
+.gallery-heading {
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 110px 20px;
+  background: #242820;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 55px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.contact > p:not(.subtitle) {
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 35px;
+}
+
+/* FOOTER */
+footer {
+  padding: 35px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f5;
+}
+
+footer p,
+footer > a {
+  font-size: 11px;
+  color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .navbar nav {
+    gap: 15px;
+  }
+
+  .section {
+    padding: 80px 5%;
+  }
+
+  .about {
+    gap: 40px;
+  }
+
+  .facility-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    height: auto;
+    padding: 22px 5%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .navbar nav a {
+    white-space: nowrap;
+  }
+
+  .nav-button {
+    padding: 10px 15px;
+  }
+
+  .hero {
+    height: 650px;
+    min-height: auto;
+    padding: 0 7%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-bottom {
+    left: 7%;
+    right: 7%;
+    font-size: 8px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img {
+    height: 350px;
+  }
+
+  .about-content h2,
+  .section-heading h2,
+  .facilities h2,
+  .gallery h2 {
+    font-size: 35px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading > p {
+    margin-top: 15px;
+  }
+
+  .villa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .villa-image {
+    height: 300px;
+  }
+
+  .facility-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 15px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 260px;
+  }
+
+  .contact h2 {
+    font-size: 40px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
